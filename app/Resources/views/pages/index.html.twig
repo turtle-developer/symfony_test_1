@@ -1,0 +1,50 @@
+{% extends 'header.html.twig' %}
+
+{% block body %}
+<div class="menu" style="padding:10px; border:1px solid #ccc;">
+	<a href="/upload/">upload image</a>
+	<br>
+	<a href="/post/create/">Add post</a>
+	<br>
+	<a href="/login/">Login</a>
+	<br>
+	<a href="/register/">Register</a>
+	<br>
+	<a href="/session_page/">Session TEST</a>
+	<br>
+	<a href="/filesystem_page/">FileSystem TEST</a>
+</div>
+
+	<h1>Post list</h1>
+	{% for post in post_array %}
+	<div class="container">
+		<div class="card">
+			<div class="card_body" style="padding:10px;">
+				<b><a href="/post/show/{{post.id}}/">{{ post.title }}</a></b>
+				<br>
+				<a href="/post/edit/{{post.id}}/">Edit</a>
+				<a href="/post/delete/{{post.id}}/">Delete</a>
+				{% if post.id == 1 %}	
+				{% set my_var="hello me" %}
+				<div>GOOD + {{ my_var }}</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+	
+	
+	<div style="padding:10px; magin:5px;">
+		<h2>Загруженные фото</h2>
+		{% for image in image_array %}
+			{% set path = "uploads/" ~ image.image %}
+			<img src="{{ asset(path) }}" style="width:150px; " />
+		{% endfor %}
+	</div>
+	
+	
+		
+			
+		
+
+{% endblock %}

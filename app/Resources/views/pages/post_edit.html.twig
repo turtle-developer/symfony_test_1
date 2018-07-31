@@ -1,0 +1,14 @@
+{% extends 'header.html.twig' %}
+
+
+
+
+{% block body %}
+	
+	<div style="margin:25px;">
+		<a href="/post/">Back</a>
+		{{ form_start(form) }}
+		{{ form_widget(form) }}
+		{{ form_end(form) }}
+	</div>
+{% endblock %}

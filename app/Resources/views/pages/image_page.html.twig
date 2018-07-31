@@ -1,0 +1,11 @@
+{% extends 'header.html.twig' %}
+
+{% block body %}
+	<h1>Showing image</h1>
+	<a href="/post/">Back</a>
+	<!-- строго по учебнику -->
+	<div style="padding:10px; magin:5px;">
+		{% set path = "uploads/" ~ image.image %}
+		<img src="{{ asset(path) }}" />
+	</div>
+{% endblock %}

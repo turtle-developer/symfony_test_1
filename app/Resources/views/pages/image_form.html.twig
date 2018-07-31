@@ -1,0 +1,17 @@
+{% extends 'header.html.twig' %}
+
+
+
+
+{% block body %}
+	<h1>Adding a new image</h1>
+	<a href="/post/">Back</a>
+	
+	
+	{{ form_start(form) }}
+    
+
+    {{ form_widget(form) }}
+	{{ form_end(form) }}
+	
+{% endblock %}
