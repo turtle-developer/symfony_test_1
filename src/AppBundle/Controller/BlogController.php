@@ -34,7 +34,7 @@ class BlogController extends Controller
 		// $session->start();
 		
 		// set and get session attributes
-		$session->set('name', 'Drak - name set from index');
+		$session->set('name', 'Drak - name set from index and Update');
 		// $session->get('name');
 		
 		
